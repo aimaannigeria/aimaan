@@ -2594,6 +2594,33 @@ footer {
     margin-top: 1rem;
 }
 
+.btn-guidelines {
+    background: transparent;
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-guidelines svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.btn-guidelines:hover {
+    border-color: #ffd700;
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-2px);
+}
+
 .event-enquiry {
     color: rgba(255,255,255,0.55);
     font-size: 0.82rem;
@@ -2670,5 +2697,191 @@ footer {
 
     .event-banner-actions {
         gap: 1rem;
+    }
+}
+
+/* ==================== CHAMPIONSHIP GUIDELINES SECTION ==================== */
+.guidelines-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.guideline-block {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--primary-color);
+}
+
+.guideline-block-wide {
+    grid-column: 1 / -1;
+}
+
+.guideline-block h3 {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+    position: relative;
+    padding-left: 0.9rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.guideline-block h4 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.guideline-block p {
+    color: var(--text-dark);
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin-bottom: 0.6rem;
+}
+
+.guideline-block p:last-child {
+    margin-bottom: 0;
+}
+
+.guideline-events {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.guideline-events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guideline-events li {
+    padding: 0.35rem 0 0.35rem 1.3rem;
+    position: relative;
+    font-size: 0.96rem;
+    color: var(--text-dark);
+}
+
+.guideline-events li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.guideline-table-wrap {
+    overflow-x: auto;
+}
+
+.guideline-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.guideline-table th {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 0.7rem 1rem;
+    text-align: left;
+}
+
+.guideline-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #eee;
+    color: var(--text-dark);
+}
+
+.guideline-table tbody tr:nth-child(even) {
+    background: #fbf6ef;
+}
+
+.guideline-payment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.guideline-payment-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.96rem;
+    color: var(--text-dark);
+}
+
+.guideline-payment-list li:last-child {
+    border-bottom: none;
+}
+
+.guideline-payment-list strong {
+    color: var(--secondary-color);
+    margin-right: 0.4rem;
+}
+
+.guideline-steps {
+    padding-left: 1.2rem;
+}
+
+.guideline-steps li {
+    font-size: 0.96rem;
+    color: var(--text-dark);
+    padding: 0.3rem 0;
+    line-height: 1.55;
+}
+
+.guideline-steps a {
+    color: var(--primary-color);
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.guideline-contacts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.guideline-contacts > div {
+    background: var(--bg-light);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.guideline-contacts strong {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.guideline-contacts span {
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .guidelines-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guideline-events {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .guideline-contacts {
+        grid-template-columns: 1fr;
+    }
+
+    .guideline-block {
+        padding: 1.5rem;
     }
 }

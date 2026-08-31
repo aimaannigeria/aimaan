@@ -675,3 +675,29 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// ==================== CHAMPIONSHIP GUIDELINES TOGGLE ====================
+document.addEventListener('DOMContentLoaded', () => {
+    const guidelinesSection = document.getElementById('guidelines');
+    const openBtn = document.getElementById('open-guidelines-btn');
+    const closeBtns = document.querySelectorAll('.close-guidelines-btn');
+    const upcomingEventSection = document.getElementById('upcoming-event');
+
+    if (!guidelinesSection || !openBtn) return;
+
+    openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        guidelinesSection.classList.add('is-open');
+        guidelinesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            guidelinesSection.classList.remove('is-open');
+            if (upcomingEventSection) {
+                upcomingEventSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+});
